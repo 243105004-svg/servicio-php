@@ -6,16 +6,16 @@
 </head>
 <body>
 
-<h1>Consumo de servicio PHP</h1>
+<h1>Consultar nombre</h1>
 
 <button onclick="obtenerNombre()">Mostrar nombre</button>
 
 <script>
 function obtenerNombre() {
     fetch("https://servicio-php.onrender.com/index.php")
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            alert("Nombre del estudiante: " + datos.nombre);
+        .then(response => response.json())
+        .then(data => {
+            alert("Nombre del estudiante: " + data.nombre);
         })
         .catch(error => {
             alert("Error al conectar con el servicio");
