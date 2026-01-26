@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicio PHP</title>
+</head>
+<body>
+
+<h1>Consumo de servicio PHP</h1>
+
+<button onclick="obtenerNombre()">Mostrar nombre</button>
+
+<script>
+function obtenerNombre() {
+    fetch("https://servicio-php.onrender.com")
+        .then(respuesta => respuesta.json())
+        .then(datos => {
+            alert("Nombre del estudiante: " + datos.nombre);
+        })
+        .catch(error => {
+            alert("Error al conectar con el servicio");
+            console.error(error);
+        });
+}
+</script>
+
+</body>
+</html>
