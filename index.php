@@ -3,5 +3,5 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
 echo json_encode([
-    "nombre" => "Santiago Ávila"
+    "nombre" => "Santiago Avila Sanchez"
 ]);
