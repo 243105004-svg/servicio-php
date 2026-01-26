@@ -12,7 +12,7 @@
 
 <script>
 function obtenerNombre() {
-    fetch("https://servicio-php.onrender.com")
+    fetch("https://servicio-php.onrender.com/index.php")
         .then(respuesta => respuesta.json())
         .then(datos => {
             alert("Nombre del estudiante: " + datos.nombre);
