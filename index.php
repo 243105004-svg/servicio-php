@@ -1,7 +1,6 @@
 <?php
-header("Content-Type: application/json");
+header("Content-Type: text/plain; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
 
-echo json_encode([
-    "nombre" => "Santiago Avila Sanchez"
-]);
+echo "Nombre: Santiago Avila Sanchez";
+;
