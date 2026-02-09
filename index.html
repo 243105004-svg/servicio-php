@@ -11,18 +11,18 @@
 <button onclick="obtenerNombre()">Mostrar nombre</button>
 
 <script>
-function obtenerNombre() {
-    fetch("https://servicio-php.onrender.com/index.php")
-        .then(response => response.json())
-        .then(data => {
-            alert("Nombre del estudiante: " + data.nombre);
-        })
-        .catch(error => {
-            alert("Error al conectar con el servicio");
-            console.error(error);
-        });
+async function obtenerNombre() {
+    try {
+        const response = await fetch("https://servicio-php.onrender.com/nombre.php");
+        const texto = await response.text();
+        alert("Nombre del estudiante: " + texto);
+    } catch (error) {
+        alert("Error al conectar con el servicio");
+        console.error(error);
+    }
 }
 </script>
 
 </body>
 </html>
+
